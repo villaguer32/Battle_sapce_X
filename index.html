@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Space Battle X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Battle X</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
@@ -15,6 +15,7 @@
       background: black;
       color: white;
       font-family: 'Orbitron', sans-serif;
+      text-align: center;
     }
 
     nav {
@@ -26,21 +27,15 @@
       gap: 10px;
       padding: 10px;
       background: rgba(0,0,0,0.7);
-      z-index: 10;
     }
 
     nav button {
       background: transparent;
       border: 2px solid cyan;
       color: cyan;
-      padding: 8px 16px;
+      padding: 8px 14px;
       border-radius: 10px;
       cursor: pointer;
-    }
-
-    nav button:hover {
-      background: cyan;
-      color: black;
     }
 
     section {
@@ -49,7 +44,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
       padding: 20px;
     }
 
@@ -65,9 +59,9 @@
       border: none;
       cursor: pointer;
       font-weight: bold;
-      transition: 0.3s;
       text-decoration: none;
       display: inline-block;
+      transition: 0.3s;
     }
 
     .descargar { background: cyan; color: black; }
@@ -79,47 +73,47 @@
 
 <body>
 
+  <!-- MENÚ -->
   <nav>
     <button onclick="ir('inicio')">Inicio</button>
-    <button onclick="ir('descargas')">Descargas</button>
-    <button onclick="ir('donaciones')">Donaciones</button>
+    <button onclick="ir('descargas')">Descargar</button>
+    <button onclick="ir('donaciones')">Donar</button>
   </nav>
 
+  <!-- INICIO -->
   <section id="inicio">
     <h1>🚀 SPACE BATTLE X</h1>
-    <p>Sobrevive, mejora tu nave y domina el espacio.</p>
+    <p>Juego espacial épico hecho por ti 😎</p>
 
-    <button class="btn descargar" onclick="ir('descargas')">DESCARGAR</button>
-    <button class="btn donar" onclick="ir('donaciones')">DONAR</button>
+    <button class="btn descargar" onclick="ir('descargas')">
+      📥 DESCARGAR
+    </button>
   </section>
 
+  <!-- DESCARGA -->
   <section id="descargas">
-    <h1>📥 DESCARGAS</h1>
+    <h1>📥 DESCARGA</h1>
     <p>Descarga el juego aquí 👇</p>
 
-    <!-- MEJOR DESCARGA -->
-    <a class="btn descargar"
-       href="https://villaguer32.github.io/Battle_space_X/BATTLE_SPACE_X.html"
-       target="_blank">
-      DESCARGAR JUEGO 🚀
+    <!-- 🔥 DESCARGA REAL -->
+    <a href="JUEGO.zip" download="JUEGO.zip" class="btn descargar">
+      🚀 DESCARGAR JUEGO ZIP
     </a>
   </section>
 
+  <!-- DONACIONES -->
   <section id="donaciones">
     <h1>💖 DONACIONES</h1>
-    <p>Apoya el desarrollo del juego 🚀</p>
+    <p>Apoya el proyecto 🚀</p>
 
-    <!-- CAMBIA ESTE LINK -->
-    <a class="btn donar"
-       href="https://www.paypal.com/"
-       target="_blank">
-      DONAR 💸
+    <a href="https://www.paypal.com/" target="_blank" class="btn donar">
+      💸 DONAR
     </a>
   </section>
 
   <script>
-    function ir(seccion) {
-      document.getElementById(seccion).scrollIntoView({ behavior: "smooth" });
+    function ir(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
