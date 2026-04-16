@@ -5,13 +5,10 @@
   <title>Space Battle X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FUENTE PRO -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -39,7 +36,6 @@
       padding: 8px 16px;
       border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s;
     }
 
     nav button:hover {
@@ -54,6 +50,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 20px;
     }
 
     h1 {
@@ -69,34 +66,25 @@
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    .descargar {
-      background: cyan;
-      color: black;
-    }
+    .descargar { background: cyan; color: black; }
+    .donar { background: magenta; color: white; }
 
-    .donar {
-      background: magenta;
-      color: white;
-    }
-
-    .btn:hover {
-      transform: scale(1.1);
-    }
+    .btn:hover { transform: scale(1.1); }
   </style>
 </head>
 
 <body>
 
-  <!-- MENÚ -->
   <nav>
     <button onclick="ir('inicio')">Inicio</button>
     <button onclick="ir('descargas')">Descargas</button>
     <button onclick="ir('donaciones')">Donaciones</button>
   </nav>
 
-  <!-- INICIO -->
   <section id="inicio">
     <h1>🚀 SPACE BATTLE X</h1>
     <p>Sobrevive, mejora tu nave y domina el espacio.</p>
@@ -105,27 +93,33 @@
     <button class="btn donar" onclick="ir('donaciones')">DONAR</button>
   </section>
 
-  <!-- DESCARGAS -->
   <section id="descargas">
     <h1>📥 DESCARGAS</h1>
     <p>Descarga el juego aquí 👇</p>
 
-    <!-- BOTÓN REAL DE DESCARGA -->
-    <a href="https://villaguer32.github.io/Battle_space_X/BATTLE_SPACE_X.html" download style="text-decoration:none;">
-      <button class="btn descargar">DESCARGAR JUEGO 🚀</button>
+    <!-- MEJOR DESCARGA -->
+    <a class="btn descargar"
+       href="https://villaguer32.github.io/Battle_space_X/BATTLE_SPACE_X.html"
+       target="_blank">
+      DESCARGAR JUEGO 🚀
     </a>
   </section>
 
-  <!-- DONACIONES -->
   <section id="donaciones">
     <h1>💖 DONACIONES</h1>
     <p>Apoya el desarrollo del juego 🚀</p>
+
+    <!-- CAMBIA ESTE LINK -->
+    <a class="btn donar"
+       href="https://www.paypal.com/"
+       target="_blank">
+      DONAR 💸
+    </a>
   </section>
 
-  <!-- SCRIPT -->
   <script>
     function ir(seccion) {
-      document.getElementById(seccion).scrollIntoView();
+      document.getElementById(seccion).scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
